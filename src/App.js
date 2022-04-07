@@ -6,6 +6,7 @@ import ChatForm from './Components/ChatForm';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    this.loadState = this.loadState.bind(this);
     this.state = { messages: [], error: null };
   }
   loadState() {
@@ -26,8 +27,8 @@ export default class App extends React.Component {
       <div className="App">
         <h1>Chat App</h1>
         <ChatList messages={this.state.messages} />
-        <ChatForm loadStat={this.loadState}/>
         <p>{this.state.error ?? ""}</p>
+        <ChatForm loadState={this.loadState} />
       </div>
     );
   }

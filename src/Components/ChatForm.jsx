@@ -9,6 +9,10 @@ export default class ChatForm extends React.Component {
         document.querySelector("[name=name]").value = '';
         document.querySelector("[name=message]").value = '';
         fetch("https://t0dbto-5002.sse.codesandbox.io/messages/new", {
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
           method: "POST",
           body: JSON.stringify({
               name: name,
@@ -26,7 +30,7 @@ export default class ChatForm extends React.Component {
           <form
             action="https://t0dbto-5002.sse.codesandbox.io/messages/new"
             method="POST"
-            onSubmit={this.handleSubmit}
+            onSubmit={(e) => this.handleSubmit(e)}
           >
             <input type="text" name="name" placeholder="Name" />
             <input type="text" name="message" placeholder="Message" />
