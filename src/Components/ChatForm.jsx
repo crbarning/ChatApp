@@ -15,7 +15,9 @@ export default class ChatForm extends React.Component {
               message: message
           })
         }).then((x) => x.json()).then((response) => {
-            console.log(response);
+            if (response.status === 200) {
+                this.props.loadState();
+            }
         })
     }
 
