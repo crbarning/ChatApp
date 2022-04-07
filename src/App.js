@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
+import ChatForm from "./Components/ChatForm";
 import ChatList from './Components/ChatList';
-import ChatForm from './Components/ChatForm';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -26,9 +26,9 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <h1>Chat App</h1>
-        <ChatList messages={this.state.messages} />
-        <p>{this.state.error ?? ""}</p>
         <ChatForm loadState={this.loadState} />
+        <p>{this.state.error ?? ""}</p>
+        <ChatList messages={this.state.messages} />
       </div>
     );
   }
