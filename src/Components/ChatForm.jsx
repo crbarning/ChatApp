@@ -4,10 +4,10 @@ export default class ChatForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let name = document.querySelector("[name=name]").value;
-    let message = document.querySelector("[name=message]").value;
+    let message = document.querySelector("[name=messages]").value;
     let time = new Date().getTime();
     document.querySelector("[name=name]").value = "";
-    document.querySelector("[name=message]").value = "";
+    document.querySelector("[name=messages]").value = "";
     fetch("https://t0dbto-5002.sse.codesandbox.io/messages/new", {
       headers: {
         Accept: "application/json",
@@ -16,7 +16,7 @@ export default class ChatForm extends React.Component {
       method: "POST",
       body: JSON.stringify({
         name: name,
-        message: message,
+        messages: message,
       }),
     })
       .then((x) => x.json())
@@ -34,7 +34,7 @@ export default class ChatForm extends React.Component {
         onSubmit={(e) => this.handleSubmit(e)}
       >
         <input type="text" name="name" placeholder="Name" />
-        <input type="text" name="message" placeholder="Message" className="msg-box" />
+        <input type="text" name="messages" placeholder="Message" className="msg-box" />
         <button type="submit">Submit</button>
       </form>
     );

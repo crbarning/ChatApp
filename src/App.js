@@ -2,6 +2,9 @@ import React from 'react';
 import './styles.css';
 import ChatForm from "./Components/ChatForm";
 import ChatList from './Components/ChatList';
+import Navbar from './Components/Navbar';
+import chatBubble from './Components/img/dots.svg';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -25,9 +28,12 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Chat App</h1>
-        <ChatForm loadState={this.loadState} />
-        <p>{this.state.error ?? ""}</p>
+        <Navbar />
+        <div className="main">
+          <h1>Chat App <img src={chatBubble} alt="Chat Bubble"/></h1>
+          <ChatForm loadState={this.loadState} />
+          <p>{this.state.error ?? ""}</p>
+        </div>
         <ChatList messages={this.state.messages} />
       </div>
     );

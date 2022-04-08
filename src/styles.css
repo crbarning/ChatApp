@@ -1,4 +1,4 @@
-.App {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,6 +6,11 @@
 
 h1 {
     padding: 20px;
+}
+
+img {
+    width: 65px;
+    height: auto;
 }
 
 form {
