@@ -1,6 +1,6 @@
 {
-  "homepage": "http://crbarning.github.io/ChatApp",
-  "name": "ChatApp",
+  "homepage": "https://crbarning.github.io/ChatApp/",
+  "name": "chatapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
