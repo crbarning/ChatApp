@@ -15,9 +15,11 @@ export default class ChatList extends React.Component{
     render() {
         let messagesJsx = this.props.messages.map(this.transformMessage);
         return (
+          <div className="chat-log">
             <table>
               <tbody>{messagesJsx}</tbody>
             </table>
+          </div>
         );
     }
 }
