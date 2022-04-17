@@ -61,6 +61,22 @@ th, td {
     padding: 6px 9px;
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 800px) {
+    h1 {
+        padding: 5px;
+    }
+    .name-msg {
+        width: 200px; 
+    }
+    .submit-btn {
+        width: 150px;
+    }
+    th,td {
+        padding: 3px;
+    }
+    .chat-log {
+        width: 80%;
+        padding: 5px;
+    }
 }
+

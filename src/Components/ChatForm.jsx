@@ -33,8 +33,8 @@ export default class ChatForm extends React.Component {
         method="POST"
         onSubmit={(e) => this.handleSubmit(e)}
       >
-        <input className="name-msg" type="text" name="name" placeholder="Name" />
-        <input className="name-msg" type="text" name="messages" placeholder="Message" />
+        <input className="name-msg" type="text" name="name" placeholder="Name" min="3" max="20"/>
+        <input className="name-msg" type="text" name="messages" placeholder="Message" min="1" max="250" />
         <button className="submit-btn" type="submit">Submit</button>
       </form>
     );
