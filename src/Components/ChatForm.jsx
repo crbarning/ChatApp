@@ -8,7 +8,7 @@ export default class ChatForm extends React.Component {
     let time = new Date().getTime();
     document.querySelector("[name=name]").value = "";
     document.querySelector("[name=messages]").value = "";
-    fetch("https://t0dbto-5002.sse.codesandbox.io/messages/new", {
+    fetch("https://7l2i1f.sse.codesandbox.io/messages/new", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ export default class ChatForm extends React.Component {
   render() {
     return (
       <form
-        action="https://t0dbto-5002.sse.codesandbox.io/messages/new"
+        action="https://7l2i1f.sse.codesandbox.io/messages/new"
         method="POST"
         onSubmit={(e) => this.handleSubmit(e)}
       >
