@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class ChatList extends React.Component{
     transformMessage(message) {
-        let dateTime = new Date(message.time).toDateString()    
+        let dateTime = new Date(message.time).toDateString() + " " + new Date(message.time).toLocaleTimeString('en-US');    
    
         return (
           <tr key={message.id}>

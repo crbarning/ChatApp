@@ -8,7 +8,7 @@ export default class ChatForm extends React.Component {
     let time = new Date().getTime();
     document.querySelector("[name=name]").value = "";
     document.querySelector("[name=messages]").value = "";
-    fetch("https://7l2i1f.sse.codesandbox.io/messages/new", {
+    fetch("https://tvg3vc.sse.codesandbox.io/messages/new", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -29,17 +29,32 @@ export default class ChatForm extends React.Component {
   render() {
     return (
       <form
-        action="https://7l2i1f.sse.codesandbox.io/messages/new"
+        action="https://tvg3vc.sse.codesandbox.io/messages/new"
         method="POST"
         onSubmit={(e) => this.handleSubmit(e)}
       >
-        <input className="name-msg" type="text" name="name" placeholder="Name" min="3" max="20"/>
-        <input className="name-msg" type="text" name="messages" placeholder="Message" min="1" max="250" />
-        <button className="submit-btn" type="submit">Submit</button>
+        <input
+          required
+          className="name-msg"
+          type="text"
+          name="name"
+          placeholder="Name"
+          minlength="2"
+          maxlength="10"
+        />
+        <input
+          required
+          className="name-msg"
+          type="text"
+          name="messages"
+          placeholder="Message"
+          minlength="2"
+          maxlength="200"
+        />
+        <button className="submit-btn" type="submit">
+          Submit
+        </button>
       </form>
     );
   }
 }
-
-
-

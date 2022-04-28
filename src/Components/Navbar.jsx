@@ -4,7 +4,6 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Navigation = () => {
     return (
-      <>
         <Navbar bg="dark" className="navbar-dark" expand="lg">
           <Container>
             <Navbar.Brand href="https://crbarning.github.io/ChatApp">
@@ -20,7 +19,6 @@ const Navigation = () => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </>
     );
   }
 

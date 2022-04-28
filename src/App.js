@@ -13,7 +13,7 @@ export default class App extends React.Component {
     this.state = { messages: [], error: null };
   }
   loadState() {
-    fetch("https://7l2i1f.sse.codesandbox.io/messages")
+    fetch("https://tvg3vc.sse.codesandbox.io/messages")
       .then((data) => data.json())
       .then((messages) => {
         this.setState({ messages: messages, error: null });
